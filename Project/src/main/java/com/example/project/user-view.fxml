@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<VBox alignment="CENTER" prefHeight="391.0" prefWidth="349.0" spacing="10.0"
+      style="-fx-background-color: yellow;" xmlns="http://javafx.com/javafx/11.0.2"
+      xmlns:fx="http://javafx.com/fxml/1"
+      fx:controller="com.example.project.ClientProtocol">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+
+    <AnchorPane prefHeight="180.0" prefWidth="240.0">
+        <children>
+            <VBox alignment="CENTER" layoutX="119.0" prefHeight="200.0" prefWidth="216.0" spacing="10.0">
+                <children>
+                    <TextField fx:id="studentNumber" promptText="Input Student Number" />
+                    <TextField fx:id="studentName" promptText="Input Name" />
+                    <TextField fx:id="faculty" promptText="Input Faculty/School" />
+                    <TextField fx:id="message" promptText="Input Riddle Answer" />
+                </children></VBox>
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="115.0" spacing="17.0">
+                <children>
+                    <Label text="Student Number" />
+                    <Label text="Student Name" />
+                    <Label text="Faculty/School" />
+                    <Label text="Message" />
+                </children>
+            </VBox>
+        </children>
+        <VBox.margin>
+            <Insets left="10.0" right="10.0" />
+        </VBox.margin>
+    </AnchorPane>
+    <Label fx:id="errorText" textAlignment="CENTER" textFill="#f70808" />
+    <Button defaultButton="true" onAction="#onSendButtonClick"
+            style="-fx-background-color: blue; -fx-font-weight: bold;" text="SEND" textFill="BLUE">
+        <font>
+            <Font size="14.0" />
+        </font>
+        <cursor>
+            <Cursor fx:constant="HAND" />
+        </cursor></Button>
+    <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+        <children>
+            <ProgressIndicator fx:id="sendingProgress" prefHeight="33.0" prefWidth="27.0" visible="false" />
+            <Label fx:id="successText" textFill="#0fc108">
+                <HBox.margin>
+                    <Insets left="10.0" />
+                </HBox.margin>
+                <font>
+                    <Font size="14.0" />
+                </font>
+            </Label>
+        </children>
+    </HBox>
+</VBox>
